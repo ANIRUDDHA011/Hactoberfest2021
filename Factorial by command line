@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include<stdlib.h>
+int fac(int );
+int main(int argc,char *argv[])
+{
+   if(argc==1)
+   {
+       printf("no argument ");
+   }
+   else
+   {
+       int a,b,ans;
+       for(int i=1;i<argc;i++)
+       {
+           a=atoi(argv[i]);
+           b=fac(a);
+           printf(" factorial of no. = %d ",b);
+           
+       }
+   }
+    return 0;   
+}
+int fac(int n)
+{
+    if(n==1)
+    return 1;
+    else
+    return fac(n-1)*n;
+}
